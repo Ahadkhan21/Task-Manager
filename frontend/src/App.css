@@ -1,0 +1,308 @@
+.App {
+  text-align: center;
+  font-family: monospace;
+  background-color: #f0f0f0;
+  color: #333;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+/* Light theme */
+.App.light {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.App.light .App-header {
+  background-color: #003366;
+  color: white;
+}
+
+.App.light .App-body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark theme */
+.App.dark {
+  background-color: #1e1e1e;
+  color: #ddd;
+}
+
+.App.dark .App-header {
+  background-color: #222;
+}
+
+.App.dark .App-body {
+  background-color: #2a2a2a;
+  color: #ffffff
+}
+
+/* Header */
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  min-height: 10vh;
+  font-size: calc(10px + 2vmin);
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+  padding: 0 20px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.App-header h4 {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0;
+}
+
+.App-header-profile{
+  display: flex;
+  flex-direction: row;
+}
+
+.App.light button.ThemeButton {
+  background: #003366;
+  border: none;
+  color: rgb(255, 255, 255);
+}
+
+.App.dark button.ThemeButton {
+  background: #222;
+  border: none;
+  color: rgb(255, 255, 255);
+}
+
+/* App Body */
+.App-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  min-height: 100vh;
+}
+
+/* Forms */
+form {
+  text-align: left;
+  margin: 5%;
+}
+
+input {
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  margin: 5px 0;
+  background-color: #f9f9f9;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.App.dark input {
+  background-color: #333;
+  color: #ddd;
+  border-color: #444;
+}
+
+/* Login Component */
+.Login {
+  margin-top: 20px;
+  border: solid;
+  padding: 20px;
+  background-color: #ffffff;
+  transition: background-color 0.15s ease;
+}
+
+.App.dark .Login {
+  background-color: #2a2a2a;
+}
+
+/* Table */
+table {
+  width: 100%;
+  max-width: 800px;
+  border-collapse: collapse;
+  margin: 20px auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  transition: background-color 0.15s ease;
+  table-layout: fixed;
+}
+
+.App.dark table {
+  background-color: #2a2a2a;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+th {
+  background-color: #004a9a;
+  color: white;
+  width: 10vw;
+}
+
+
+.App.dark th {
+  background-color: #444;
+}
+
+tr:nth-child(even) {
+  background-color: #f7f5f9;
+}
+
+.App.dark tr:nth-child(even) {
+  background-color: #3a3a3a;
+}
+
+tr:hover {
+  background-color: #e0e0e0;
+}
+
+.App.dark tr:hover {
+  background-color: #4a4a4a;
+}
+
+/* Button Links */
+.button-link {
+  background: transparent;
+  font-weight: bold;
+}
+
+.button-link:hover {
+  color: midnightblue;
+}
+
+.App.dark .button-link {
+  color: #004a9a  ;
+}
+
+/* Modal */
+.Modal {
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  transition: background-color 0.15s ease;
+}
+
+.App.dark .Modal {
+  background-color: #2a2a2a;
+}
+
+/* User Info and Dropdown */
+.UserInfo {
+  text-align: right;
+  margin: 20px;
+}
+
+.UserDropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.UserDropdown button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.App.dark .UserDropdown button {
+  background-color: #333;
+  color: #ddd;
+}
+
+/* Dropdown Menu */
+.DropdownMenu {
+  display: block;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+
+.App.dark .DropdownMenu {
+  background-color: #2a2a2a;
+}
+
+.DropdownMenu button {
+  padding: 12px 16px;
+  text-align: left;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.App.dark .DropdownMenu button {
+  background-color: #333;
+  color: #f0f0f0
+}
+
+.DropdownMenu button:hover {
+  background-color: #003a78;
+}
+
+.App.dark .DropdownMenu button:hover {
+  background-color: #444;
+}
+
+/* General Button Styling */
+.App button {
+  background-color: #004a9a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  margin: 3px;
+}
+
+.App.dark button {
+  background-color: #444;
+  color: #f0f0f0;
+}
+
+.App button:hover{
+  background-color: #003a78  ;
+}
+.App.dark button:hover{
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+/* Specific styles for delete and save buttons */
+button.button-delete {
+  background-color: rgba(213, 9, 9, 0.998);
+}
+.App.dark button.button-delete {
+  background-color: rgba(255, 17, 17, 0.998);
+  color: white;
+}
+
+button.button-save {
+  background-color: rgb(11, 117, 11);
+  color: #f0f0f0;
+}
+.App.dark button.button-save {
+  background-color: rgb(0, 175, 0);
+  color: #f0f0f0
+} 
+
+.App button.button-delete:hover {
+  background-color: darkred;
+}
+
+.button-save:hover {
+  background-color: rgb(11, 117, 11);
+}
